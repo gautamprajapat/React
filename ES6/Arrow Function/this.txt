@@ -1,0 +1,37 @@
+What About this?
+The handling of this is also different in arrow functions compared to regular functions.
+
+In short, with arrow functions there is no binding of this.
+
+In regular functions the this keyword represented the object that called the function, which could be the window, the document, a button or whatever.
+
+With arrow functions, the this keyword always represents the object that defined the arrow function.
+
+With regular functions, this refers to the object that called the function. So, if you have a method inside an object and you call that method using dot notation (object.method()), this inside the method refers to the object itself.
+
+However, with arrow functions, this refers to the object that defined the arrow function, not the object that called it. This behavior is different from regular functions. Arrow functions don't have their own this context; instead, they inherit this from the surrounding lexical scope. This makes arrow functions especially useful when you want to maintain the context of the enclosing scope, such as in callbacks or when defining methods within objects.
+
+
+
+
+Let us take a look at two examples to understand the difference.
+const person = {
+  name: "Alice",
+  sayHi: function() {
+    console.log(`Hi, I'm ${this.name}`);
+  }
+};
+
+person.sayHi(); // Output: Hi, I'm Alice
+
+
+
+const person = {
+  name: "Alice",
+  sayHi: () => {
+    console.log(`Hi, I'm ${this.name}`);
+  }
+};
+
+person.sayHi(); // Output: Hi, I'm undefined
+
