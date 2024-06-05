@@ -5,6 +5,7 @@ import './App.css'
 function App() {
   const [color, setColor] = useState()
 
+  
   return (
 <>
     <div className="w-full h-screen duration-200 bg-gray-500"
