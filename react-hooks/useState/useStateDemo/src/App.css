@@ -1,0 +1,42 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%; /* Ensure the body and html take full height as well */
+}
+
+#root {
+    width: 100%;
+    height: 100%; /* Ensure the root div takes full height */
+}
+
+.full-width-div {
+    width: 100%;
+    height: 100vh; /* 100vh to ensure it takes the full viewport height */
+    margin: 0;
+    border: 2px solid red;
+    
+  
+}
+
+.color-bar{
+    position: absolute; /* Position absolutely relative to the .full-width-div */
+    bottom: 10px; /* Position at the bottom */
+    width: 100%; /* Make the color-bar take full width */
+    /* background-color: rgba(255, 255, 255, 0.8); Optional: Semi-transparent background for visibility */
+    text-align: center; /* Center the content horizontally */
+    padding: 10px 0; /* Optional: Padding for visual spacing */
+
+   
+}
+.color-bar ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+.color-bar li {
+    display: inline-block; /* Ensure list items are inline */
+}
